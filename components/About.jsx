@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const About = () => {
@@ -6,7 +7,7 @@ const About = () => {
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-            <img
+            <Image width={450} height={450}
               className="object-cover object-center rounded"
               alt="hero"
               src="https://dummyimage.com/720x600"
@@ -18,13 +19,13 @@ const About = () => {
               Passionate Web Developer <br className="hidden lg:inline-block" />
             </h1>
             <p className="mb-8 leading-relaxed">
-              Hi, I'm Siddique Ahmed, a passionate web developer exploring the
-              MERN stack. I specialize in building user-friendly, dynamic
-              applications with skills in HTML, CSS, JavaScript, React.js, and
-              Next.js. I enjoy crafting clean, responsive designs using Tailwind
-              CSS and Bootstrap. On the back end, I work with MongoDB, Firebase,
-              Next Auth, and Cloudinary. Currently, I'm diving into Node.js,
-              Express.js, and React Native to enhance my full-stack development
+              Hi Im Siddique Ahmed a passionate web developer exploring the
+              MERN stack. I specialize in building user-friendly dynamic
+              applications with skills in HTML CSS JavaScript React.js and
+              Next.js. I enjoy crafting clean responsive designs using Tailwind
+              CSS and Bootstrap. On the back end I work with MongoDB Firebase
+              Next Auth and Cloudinary. Currently Im diving into Node.js
+              Express.js and React Native to enhance my full-stack development
               expertise.
             </p>
             <div className="flex justify-center">

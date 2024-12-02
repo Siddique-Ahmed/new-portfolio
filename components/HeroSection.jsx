@@ -36,13 +36,13 @@ const HeroSection = () => {
               />
             </h1>
             <p className="mb-8 leading-relaxed">
-              Hi, I'm Siddique Ahmed, a passionate web developer exploring the
-              MERN stack. I specialize in building user-friendly, dynamic
-              applications with skills in HTML, CSS, JavaScript, React.js, and
-              Next.js. I enjoy crafting clean, responsive designs using Tailwind
-              CSS and Bootstrap. On the back end, I work with MongoDB, Firebase,
-              Next Auth, and Cloudinary. Currently, I'm diving into Node.js,
-              Express.js, and React Native to enhance my full-stack development
+              Hi Im Siddique Ahmed a passionate web developer exploring the
+              MERN stack. I specialize in building user-friendly dynamic
+              applications with skills in HTML CSS JavaScript React.js and
+              Next.js. I enjoy crafting clean responsive designs using Tailwind
+              CSS and Bootstrap. On the back end I work with MongoDB Firebase
+              Next Auth and Cloudinary. Currently Im diving into Node.js
+              Express.js and React Native to enhance my full-stack development
               expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center">

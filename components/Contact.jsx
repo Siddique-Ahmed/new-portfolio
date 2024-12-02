@@ -37,7 +37,7 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              We're here to help and answer any question you might have. We look
+              Were here to help and answer any question you might have. We look
               forward to hearing from you!
             </p>
           </div>
@@ -49,7 +49,7 @@ const Contact = () => {
             </div>
             <h2 className="text-2xl font-bold">Get in touch</h2>
             <p className="text-gray-500 dark:text-gray-400">
-              Fill out the form and we'll get back to you as soon as possible.
+              Fill out the form and well get back to you as soon as possible.
             </p>
             <div className="space-y-2">
               <h3 className="font-bold">Follow us</h3>
