@@ -114,7 +114,7 @@ const Contact = () => {
             <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               49 Smith St.
               <br />
-              Saint Cloud, MN 56301
+              Saint Cloud MN 56301
             </p>
           </div>
           <Button variant="link">
