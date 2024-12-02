@@ -29,8 +29,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-12 md:py-24">
-      <div className="container px-4 md:px-6">
+    <section id="contact" className="w-full py-12 md:py-24">
+      <div className="w-full container px-4 md:px-6">
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className=" space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -66,7 +66,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white py-3 px-4 space-y-6">
+          <div className="py-3 px-4 space-y-6">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>

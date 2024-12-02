@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Heart } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Heart } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,6 +13,11 @@ const Footer = () => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+
               <span className="text-2xl font-bold">Siddique Ahmed</span>
             </Link>
             <p className="text-sm text-muted-foreground">
@@ -21,31 +27,33 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link 
-                    href={`#${item.toLowerCase()}`} 
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              {["Home", "About", "Skills", "Projects", "Contact"].map(
+                (item) => (
+                  <li key={item}>
+                    <Link
+                      href={`#${item.toLowerCase()}`}
+                      className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Connect</h3>
             <div className="flex space-x-4">
               {[
-                { icon: Facebook, label: 'Facebook' },
-                { icon: Twitter, label: 'Twitter' },
-                { icon: Instagram, label: 'Instagram' },
-                { icon: Linkedin, label: 'LinkedIn' }
+                { icon: Facebook, label: "Facebook" },
+                { icon: Twitter, label: "Twitter" },
+                { icon: Instagram, label: "Instagram" },
+                { icon: Linkedin, label: "LinkedIn" },
               ].map(({ icon: Icon, label }) => (
-                <a 
+                <a
                   key={label}
-                  href="#" 
-                  aria-label={label} 
+                  href="#"
+                  aria-label={label}
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
                   <Icon size={24} />
@@ -57,8 +65,9 @@ const Footer = () => {
         <Separator className="my-6" />
         <div className="py-6 text-sm text-center text-muted-foreground">
           <p>
-            © {currentYear} Siddique Ahmed. All rights reserved. Made with{' '}
-            <Heart className="inline-block w-4 h-4 text-destructive" /> in Pakistan.
+            © {currentYear} Siddique Ahmed. All rights reserved. Made with{" "}
+            <Heart className="inline-block w-4 h-4 text-destructive" /> in
+            Pakistan.
           </p>
         </div>
       </div>
@@ -67,4 +76,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

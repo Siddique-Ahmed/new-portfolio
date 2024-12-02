@@ -12,18 +12,10 @@ export default function Page() {
       <Header />
       <main>
         <HeroSection />
-        <section id="about">
           <About />
-        </section>
-        <section id="skills">
           <Skills />
-        </section>
-        <section id="projects">
           <Projects />
-        </section>
-        <section id="contact">
           <Contact />
-        </section>
         <Footer />
       </main>
     </div>

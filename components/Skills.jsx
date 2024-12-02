@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const Skills = () => {
   return (
-    <div className="bg-gray-100 px-5 py-8 md:py-24">
+    <div id="skills" className="px-5 py-8 md:py-24">
       <div className="flex flex-wrap items-center justify-evenly gap-10">
         <Card className="w-full sm:w-[240px] flex flex-col transition-all cursor-pointer items-center gap-2 shadow-lg hover:scale-105 hover:shadow-2xl">
           <CardHeader>

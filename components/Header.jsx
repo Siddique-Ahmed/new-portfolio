@@ -1,30 +1,32 @@
-'use client'
+"use client";
 
-import React, { useState, useEffect } from "react"
-import { Menu, X, Sun, Moon } from 'lucide-react'
-import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
+import React, { useState, useEffect } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { ModeToggle } from "./ToggleMode";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <motion.header 
+    <motion.header
       className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md' : 'bg-transparent'
+        isScrolled ? " backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -34,31 +36,28 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-primary">Portfolio</span>
+            <Avatar>
+              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-          {['Home', 'About', 'Skills','Projects', 'Contact'].map((item) => (
-                <Link
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors duration-200"
-                >
-                  {item}
-                </Link>
-              ))}
+            {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+              <Link
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary  transition-colors duration-200"
+              >
+                {item}
+              </Link>
+            ))}
           </nav>
 
           {/* Dark Mode Toggle & Hamburger */}
           <div className="flex items-center space-x-4">
-            <button 
-              className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-colors duration-200"
-              aria-label="Toggle dark mode"
-            >
-              <Sun className="w-5 h-5" />
-            </button>
-
+            <ModeToggle />
             <button
               onClick={toggleMenu}
               className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary transition-colors duration-200"
@@ -81,33 +80,28 @@ const Header = () => {
           <motion.div
             className="md:hidden"
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
             <div className="px-4 py-4 bg-white shadow-lg rounded-lg space-y-1">
-            {['Home', 'About', 'Skills','Projects', 'Contact'].map((item) => (
-                <Link
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors duration-200"
-                >
-                  {item}
-                </Link>
-              ))}
-              <button 
-                className="mt-4 w-full flex items-center justify-center px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors duration-200"
-                aria-label="Toggle dark mode"
-              >
-                <Sun className="w-5 h-5 mr-2" />
-                Toggle Dark Mode
-              </button>
+              {["Home", "About", "Skills", "Projects", "Contact"].map(
+                (item) => (
+                  <Link
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary transition-colors duration-200"
+                  >
+                    {item}
+                  </Link>
+                )
+              )}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </motion.header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
