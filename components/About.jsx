@@ -1,8 +1,17 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import ProfilePic from "../public/profile.jpg";
 
 const About = () => {
+
+  const handleDownload = () => {
+      const link = document.createElement("a");
+      link.href = "/CV/Resume.pdf";
+      link.download = "SiddiqueAhmedCV.pdf";
+      link.click();
+    };
+
   return (
     <div id="about">
       <section className="text-gray-600 body-font">
@@ -31,7 +40,7 @@ const About = () => {
               React Native to enhance my full-stack development expertise.
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-black rounded text-lg">
+              <button onClick={handleDownload} className="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-black rounded text-lg">
                 Download CV
               </button>
             </div>

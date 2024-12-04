@@ -6,6 +6,14 @@ import { ReactTyped } from "react-typed";
 import ProfilePic from "../public/profile.jpg"
 
 const HeroSection = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/CV/Resume.pdf";
+    link.download = "SiddiqueAhmedCV.pdf";
+    link.click();
+  };
+
   return (
     <div>
       <section className="text-gray-600 body-font">
@@ -47,7 +55,7 @@ const HeroSection = () => {
               React Native to enhance my full-stack development expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center">
-              <button className="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-black rounded text-lg">
+              <button onClick={handleDownload} className="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-black rounded text-lg">
                 Download CV
               </button>
               <Link href={"#about"}>
