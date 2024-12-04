@@ -73,7 +73,7 @@ const ProjectDetail = ({ id }) => {
         <div className="container px-5 py-24 mx-auto">
           {filterProject.map((item)=>{
             return(
-          <div className="lg:w-4/5 mx-auto flex flex-wrap">
+          <div key={item.id} className="lg:w-4/5 mx-auto flex flex-wrap">
             <Image
             width={230}
             height={230}
