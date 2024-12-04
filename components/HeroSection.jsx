@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ReactTyped } from "react-typed";
+import ProfilePic from "../public/profile.jpg"
 
 const HeroSection = () => {
   return (
@@ -58,11 +59,11 @@ const HeroSection = () => {
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <Image
-              width={450}
-              height={450}
+              width={400}
+              height={400}
               className="object-cover object-center rounded"
               alt="hero"
-              src="https://dummyimage.com/720x600"
+              src={ProfilePic}
             />
           </div>
         </div>

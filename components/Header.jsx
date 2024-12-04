@@ -37,7 +37,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarImage src="/profile.jpg" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </Link>
